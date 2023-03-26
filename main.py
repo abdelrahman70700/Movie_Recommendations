@@ -26,7 +26,7 @@ def recommend(movie):
 
 
 
-movies=pickle.load(open('movie_list.pkl','rb'))
+# movies=pickle.load(open('movie_list.pkl','rb'))
 # similarity=pickle.load(open("similarity.pkl",'rb'))
 # cv = CountVectorizer(max_features=10000,stop_words='english')
 # from sklearn.metrics.pairwise import cosine_similarity

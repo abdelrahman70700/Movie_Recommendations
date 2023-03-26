@@ -27,7 +27,7 @@ def recommend(movie):
 
 
 movies=pickle.load(open('movie_list.pkl','rb'))
-similarity=pickle.load(open("similarity.pkl",'rb'))
+# similarity=pickle.load(open("similarity.pkl",'rb'))
 # cv = CountVectorizer(max_features=10000,stop_words='english')
 # from sklearn.metrics.pairwise import cosine_similarity
 # vector = cv.fit_transform(movies['tags']).toarray()
@@ -38,23 +38,23 @@ st.title("Movie Recommandor System")
 Movies_Name = st.selectbox('How would you like to recomend movies?',movies['title'].values)
 
 if st.button('recommend'):
-    recommended_movie_posters,recommend_Movies=recommend(Movies_Name)
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        st.text(recommend_Movies[0])
-        st.image(recommended_movie_posters[0])
-    with col2:
-        st.text(recommend_Movies[1])
-        st.image(recommended_movie_posters[1])
+#     recommended_movie_posters,recommend_Movies=recommend(Movies_Name)
+#     col1, col2, col3, col4, col5 = st.columns(5)
+#     with col1:
+#         st.text(recommend_Movies[0])
+#         st.image(recommended_movie_posters[0])
+#     with col2:
+#         st.text(recommend_Movies[1])
+#         st.image(recommended_movie_posters[1])
 
-    with col3:
-        st.text(recommend_Movies[2])
-        st.image(recommended_movie_posters[2])
-    with col4:
-        st.text(recommend_Movies[3])
-        st.image(recommended_movie_posters[3])
-    with col5:
-        st.text(recommend_Movies[4])
-        st.image(recommended_movie_posters[4])
+#     with col3:
+#         st.text(recommend_Movies[2])
+#         st.image(recommended_movie_posters[2])
+#     with col4:
+#         st.text(recommend_Movies[3])
+#         st.image(recommended_movie_posters[3])
+#     with col5:
+#         st.text(recommend_Movies[4])
+#         st.image(recommended_movie_posters[4])
 #
 

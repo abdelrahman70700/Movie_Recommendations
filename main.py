@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import requests
-# from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 
 def fetch_poster(movie_id):
@@ -26,12 +26,12 @@ def recommend(movie):
 
 
 
-# movies=pickle.load(open('movie_list.pkl','rb'))
+movies=pickle.load(open('movie_list.pkl','rb'))
 similarity=pickle.load(open("similarity.pkl",'rb'))
-# cv = CountVectorizer(max_features=10000,stop_words='english')
-# from sklearn.metrics.pairwise import cosine_similarity
-# vector = cv.fit_transform(movies['tags']).toarray()
-# similarity = cosine_similarity(vector)
+cv = CountVectorizer(max_features=10000,stop_words='english')
+from sklearn.metrics.pairwise import cosine_similarity
+vector = cv.fit_transform(movies['tags']).toarray()
+similarity = cosine_similarity(vector)
 
 
 st.title("Movie Recommandor System")

@@ -7,7 +7,6 @@
 
 ## Video Tutorial
 
-[![YouTube Video](https://img.youtube.com/vi/F103alwgWHA/0.jpg)](https://youtu.be/)
 
 
 
@@ -22,7 +21,7 @@ Pillow==8.4.0
 
 ## Run the app
 ```
-streamlit run app.py
+streamlit run main.py
 ```
 
 ## Author
